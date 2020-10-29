@@ -11,6 +11,12 @@ use App\Models\Place;
 
 class PlaceController extends Controller
 {
+    /**
+     * Adds a place.
+     *
+     * @param  Request  $request
+     * @return Response
+     */
     public function add(Request $request) {
         $place = new Place;
         $place->longitude = $request->longitude;
@@ -19,6 +25,11 @@ class PlaceController extends Controller
         return $place->save();
     }
 
+    /**
+     * Returns all places
+     *
+     * @return Response
+     */
     public function get_all() {
         $places = Place::all();
         return response()->json($places);
