@@ -6,8 +6,7 @@ jobs:
       - image: cimg/base:2020.01
 
     steps:
-      #- checkout
-
+      - checkout
       - add_ssh_keys:
           fingerprints:
             - 'ad:e1:02:66:71:97:15:90:82:bf:18:b1:a0:bb:7f:b0'
