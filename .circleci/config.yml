@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  deploy-backend:
+  build:
     docker:
       # Specify the version you desire here
       - image: cimg/base:2020.01
