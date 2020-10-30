@@ -3,14 +3,14 @@ jobs:
   build:
     docker:
       # Specify the version you desire here
-      - image: circleci/php:7.4-node-browsers
+      - image: cimg/base:2020.01
 
     steps:
       #- checkout
 
       - add_ssh_keys:
           fingerprints:
-            - 'e0:63:1e:da:e9:07:87:f1:34:41:61:44:98:fb:68:5c'
+            - 'ad:e1:02:66:71:97:15:90:82:bf:18:b1:a0:bb:7f:b0'
       - run:
           name: Copy over ssh
           command:
