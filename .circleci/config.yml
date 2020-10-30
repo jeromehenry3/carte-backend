@@ -18,9 +18,9 @@ jobs:
       - run:
           name: connect via ssh
           command:
-            ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST:/var/www/www.carto-api.jeromehenry.fr/
+            ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST
 
       - run:
           name: composer install deps
           command:
-            composer install -n --prefer-dist
+            cd $ROOT_PATH && composer install -n --prefer-dist
