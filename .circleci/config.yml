@@ -13,12 +13,12 @@ jobs:
       - run:
           name: Copy over ssh
           command:
-            scp -o StrictHostKeyChecking=no -r -p ./* $SSH_USER@$SSH_HOST:/var/www/www.carto-api.jeromehenry.fr/
+            scp -v -o StrictHostKeyChecking=no -r -p ./* $SSH_USER@$SSH_HOST:/var/www/www.carto-api.jeromehenry.fr/
 
       - run:
           name: connect via ssh
           command:
-            ssh -v -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST 'echo cd /var/www/www.carto-api.jeromehenry.fr/ && echo composer install -n --prefer-dist'
+            ssh -v -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST 'echo cd /var/www/www.carto-api.jeromehenry.fr/ && echo composer install -n --prefer-dist && echo php artisan migrate'
 
       # - run:
       #     name: composer install deps
