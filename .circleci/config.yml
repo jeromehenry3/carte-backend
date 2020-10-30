@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  deploy-backend:
     docker:
       # Specify the version you desire here
       - image: cimg/base:2020.01
@@ -18,7 +18,7 @@ jobs:
       - run:
           name: connect via ssh
           command:
-            ssh StrictHostKeyChecking=no $SSH_USER@$SSH_HOST:/var/www/www.carto-api.jeromehenry.fr/
+            ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST:/var/www/www.carto-api.jeromehenry.fr/
 
       - run:
           name: composer install deps
