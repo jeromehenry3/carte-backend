@@ -5,3 +5,10 @@ Homestead.yaml
 .env
 .env.prod
 .phpunit.result.cache
+
+public/.old.htaccess
+public/.htaccess
+public/donotsend.htaccess
+
+
+
