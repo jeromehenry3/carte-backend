@@ -6,7 +6,7 @@ jobs:
       - image: circleci/php:7.4-node-browsers
 
     steps:
-      - checkout
+      #- checkout
 
       - add_ssh_keys:
           fingerprints:
@@ -16,12 +16,12 @@ jobs:
           command:
             scp -o StrictHostKeyChecking=no -r -p ./* $SSH_USER@$SSH_HOST:/var/www/www.carto-api.jeromehenry.fr/
 
-      -run:
+      - run:
           name: connect via ssh
           command:
             ssh StrictHostKeyChecking=no $SSH_USER@$SSH_HOST:/var/www/www.carto-api.jeromehenry.fr/
 
-      -run:
+      - run:
           name: composer install deps
           command:
             composer install -n --prefer-dist
