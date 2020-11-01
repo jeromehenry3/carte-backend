@@ -19,6 +19,6 @@ class Place extends Model
      * @var array
      */
     protected $fillable = [
-        'longitude', 'latitude', 'type'
+        'longitude', 'latitude', 'type', 'title', 'description'
     ];
 }

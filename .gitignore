@@ -10,5 +10,4 @@ public/.old.htaccess
 public/.htaccess
 public/donotsend.htaccess
 
-
-
+app/Http/Middleware/CorsMiddleware.php

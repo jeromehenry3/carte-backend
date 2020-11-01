@@ -22,6 +22,8 @@ class PlaceController extends Controller
         $place->longitude = $request->longitude;
         $place->latitude = $request->latitude;
         $place->type = $request->type;
+        $place->title = $request->title;
+        $place->description = $request->description;
         return $place->save();
     }
 
